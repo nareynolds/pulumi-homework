@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# format everything
+pnpx nx format
+echo "All files formatted."
+
+# lint, test, build changed projects
+pnpx nx affected -t lint test build
+echo "All affected projects linted, tested, and built successfully."
+
+# add changes to this commit
+git add .
