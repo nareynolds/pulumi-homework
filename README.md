@@ -93,3 +93,5 @@ And join the Nx community:
 ### init
 
 npx create-nx-workspace --pm pnpm
+
+follow instructions for adding Husky https://typicode.github.io/husky/get-started.html
