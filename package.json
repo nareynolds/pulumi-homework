@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "graph": "pnpx nx dep-graph",
+    "format": "pnpx nx format",
+    "lint": "pnpx nx run-many --target=lint --all",
+    "build": "pnpx nx run-many --target=build --all",
+    "test": "pnpx nx run-many --target=test --all",
     "prepare": "husky"
   },
   "private": true,
