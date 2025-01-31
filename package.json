@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "aws-login": "aws sso login --sso-session my-sso",
+    "pulumi-login": "pulumi login",
+    "deploy": "pnpm --filter=aws-account run deploy",
     "graph": "pnpx nx dep-graph",
     "format": "pnpx nx format",
     "lint": "pnpx nx run-many --target=lint --all",

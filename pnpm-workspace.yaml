@@ -1,3 +1,5 @@
 packages:
+  - 'products/*'
+  - 'products'
   - 'packages/*'
   - 'packages'
