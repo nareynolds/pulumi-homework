@@ -33,10 +33,13 @@
         "dependsOn": [
           "build"
         ],
-        "command": "docker build -f products/server/Dockerfile . -t server"
+        "command": "docker build --platform linux/amd64 -f products/server/Dockerfile . -t express-helloworld"
       },
       "docker-run": {
-        "command": "docker run -p 3333:3333 -e API_MESSAGE=Hello_World server"
+        "command": "docker run -p 80:80 -e API_MESSAGE=Hello_World express-helloworld"
+      },
+      "docker-push": {
+        "command": "docker tag express-helloworld:latest 024215879654.dkr.ecr.us-east-1.amazonaws.com/express-helloworld:latest && docker push 024215879654.dkr.ecr.us-east-1.amazonaws.com/express-helloworld:latest"
       }
     }
   }

@@ -1,0 +1,3 @@
+config:
+  aws:region: us-east-1
+  ecs-deployment:api-message: This is a Pulumi configured message

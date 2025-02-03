@@ -1,4 +1,4 @@
-FROM node:20-slim AS base
+FROM node:22-slim AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
@@ -15,6 +15,6 @@ RUN mv /deploy/node_modules dist/products/server/node_modules
 FROM base AS server
 COPY --from=build /workspace/dist/products/server /app
 WORKDIR /app
-EXPOSE 3333
+EXPOSE 80
 CMD [ "node", "." ]
 
